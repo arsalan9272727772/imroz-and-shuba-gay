@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imroz & Shuba ❤️</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#09000d,#210018,#08000d);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.page{
+    display:none;
+    min-height:100vh;
+    padding:25px 16px;
+    animation:fade .6s ease;
+}
+
+.page.active{display:block}
+
+@keyframes fade{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+h1{
+    text-align:center;
+    font-size:34px;
+    margin:25px 0 12px;
+    color:#ff72c6;
+    text-shadow:0 0 20px #ff1493;
+}
+
+h2{
+    text-align:center;
+    margin:20px 0;
+    color:#ffb8e5;
+}
+
+.subtitle{
+    text-align:center;
+    color:#ccc;
+    line-height:1.7;
+}
+
+.photos{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:28px auto;
+    max-width:650px;
+}
+
+.person{
+    width:48%;
+    text-align:center;
+}
+
+.person img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+    border-radius:20px;
+    border:2px solid #ff4eaf;
+    box-shadow:0 0 25px #ff149355;
+}
+
+.person-name{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+    color:#ffb5e5;
+}
+
+button{
+    display:block;
+    margin:25px auto;
+    padding:15px 27px;
+    border:0;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff1587,#8d27ff);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    box-shadow:0 8px 25px #ff158755;
+}
+
+button:active{
+    transform:scale(.94);
+}
+
+.chat{
+    max-width:550px;
+    margin:25px auto;
+    padding:18px;
+    background:#11151b;
+    border:1px solid #292f38;
+    border-radius:22px;
+}
+
+.chat-title{
+    text-align:center;
+    padding:10px;
+    border-bottom:1px solid #292f38;
+    color:#ff83c9;
+}
+
+.msg{
+    max-width:82%;
+    padding:13px 16px;
+    margin:15px 0;
+    border-radius:17px;
+    line-height:1.5;
+}
+
+.left{
+    background:#282e36;
+    border-bottom-left-radius:4px;
+}
+
+.right{
+    background:#a91468;
+    margin-left:auto;
+    border-bottom-right-radius:4px;
+}
+
+.time{
+    font-size:10px;
+    color:#aaa;
+    text-align:right;
+    margin-top:5px;
+}
+
+.story{
+    max-width:600px;
+    margin:25px auto;
+    padding:27px;
+    background:#160d18;
+    border:1px solid #73315e;
+    border-radius:22px;
+    text-align:center;
+    line-height:2;
+}
+
+.story p{
+    margin:18px 0;
+}
+
+.heart{
+    text-align:center;
+    font-size:65px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    50%{transform:scale(1.15)}
+}
+
+.card{
+    max-width:580px;
+    margin:30px auto;
+    padding:35px 22px;
+    background:#fff4fb;
+    color:#5d1749;
+    border:7px double #c9278f;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 35px #ff43ae77;
+}
+
+.card h1{
+    color:#a51b70;
+    text-shadow:none;
+}
+
+.card h2{
+    color:#8d185f;
+}
+
+.date{
+    margin:25px 0;
+    font-size:32px;
+    font-weight:bold;
+    color:#c21978;
+}
+
+.footer{
+    text-align:center;
+    color:#ff9bd5;
+    margin:30px 0;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+
+<div class="heart">❤️</div>
+
+<h1>Imroz ❤️ Shuba</h1>
+
+<p class="subtitle">
+Ek kahani jo bilkul normal shuru hui...
+<br>
+lekin aage jaakar sab kuch interesting ho gaya 😂
+</p>
+
+<div class="photos">
+
+<div class="person">
+<img src="imroz.jpg" alt="Imroz">
+<div class="person-name">Imroz 😎</div>
+</div>
+
+<div class="person">
+<img src="shuba.jpg" alt="Shuba">
+<div class="person-name">Shuba 😌</div>
+</div>
+
+</div>
+
+<p class="subtitle">
+<b>Aakhir dono ki kahani kya hai? 👀</b>
+</p>
+
+<button onclick="showPage(2)">
+Kahani Dekho 💬
+</button>
+
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+
+<h1>💬 Private Chat</h1>
+
+<div class="chat">
+
+<div class="chat-title">
+Imroz ❤️ Shuba
+</div>
+
+<div class="msg left">
+Imroz: Ek baat bolu? 👀
+<div class="time">10:41 PM</div>
+</div>
+
+<div class="msg right">
+Shuba: Haan bolo 😂
+<div class="time">10:42 PM</div>
+</div>
+
+<div class="msg left">
+Imroz: I love you, Shuba ❤️
+<div class="time">10:42 PM</div>
+</div>
+
+<div class="msg right">
+Shuba: I love you too, Imroz ❤️
+<div class="time">10:43 PM</div>
+</div>
+
+<div class="msg left">
+Imroz: Toh phir baat pakki? 💍
+<div class="time">10:44 PM</div>
+</div>
+
+<div class="msg right">
+Shuba: Bilkul pakki 😂❤️
+<div class="time">10:45 PM</div>
+</div>
+
+</div>
+
+<button onclick="showPage(3)">
+Aage Dekho ❤️
+</button>
+
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+
+<div class="heart">💕</div>
+
+<h1>Mohabbat Ki Kahani 🌹</h1>
+
+<div class="story">
+
+<p>
+Ek mulaqat se shuru hui baat, ❤️<br>
+dheere-dheere badh gayi jazbaat.
+</p>
+
+<p>
+Imroz ki muskaan,<br>
+Shuba ka andaaz,<br>
+dono ki kahani mein<br>
+hai alag hi raaz. 😂
+</p>
+
+<p>
+Naam do hain, kahani ek hai,<br>
+dil ki duniya mein nishani ek hai. ❤️
+</p>
+
+<p>
+Do dil mile,<br>
+ek vaada hua,<br>
+mohabbat ka khoobsurat<br>
+iraada hua. 💍
+</p>
+
+<p>
+Tum saath ho toh sab complete,<br>
+warna story lagti incomplete. 🥹❤️
+</p>
+
+</div>
+
+<button onclick="showPage(4)">
+Wedding Card Dekho 💍
+</button>
+
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+
+<div class="card">
+
+<div style="font-size:40px">
+🌹 💐 🌹
+</div>
+
+<h1>Wedding Invitation</h1>
+
+<p>
+With Love & Happiness ❤️
+</p>
+
+<h2>Imroz</h2>
+
+<p>♡</p>
+
+<h2>Shuba</h2>
+
+<div class="date">
+2028 💍
+</div>
+
+<p>
+Do dil mile,<br>
+ek vaada hua,<br>
+mohabbat ka khoobsurat<br>
+iraada hua. ❤️
+</p>
+
+<br>
+
+<p>
+Jab sajega ye samaa,<br>
+tab poori hogi ye filmy dastaan. ✨
+</p>
+
+<br>
+
+<b>YOU ARE INVITED 💐</b>
+
+</div>
+
+<div class="footer">
+Made by arsalan 🤭✨
+</div>
+
+<button onclick="showPage(5)">
+Last Surprise 😂
+</button>
+
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+
+<div class="heart">😂❤️</div>
+
+<h1>Story Ka End</h1>
+
+<div class="story">
+
+<p>
+Ek taraf Imroz ❤️
+<br>
+Ek taraf Shuba ❤️
+</p>
+
+<p>
+Beech mein mohabbat,
+<br>
+aur upar se shaadi ka card. 😂💍
+</p>
+
+<h2>
+Ab shaadi mein bulaoge ya nahi? 😭😂
+</h2>
+
+</div>
+
+<div class="footer">
+Made by arsalan 🤭✨
+</div>
+
+<button onclick="showPage(1)">
+🔄 Story Phir Se
+</button>
+
+</section>
+
+
+<script>
+
+function showPage(number){
+
+document.querySelectorAll(".page").forEach(function(page){
+    page.classList.remove("active");
+});
+
+document.getElementById("page"+number).classList.add("active");
+
+window.scrollTo({
+    top:0,
+    behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
